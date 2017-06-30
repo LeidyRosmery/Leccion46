@@ -1,17 +1,18 @@
-var menu= document.getElementById('menuTogle')
+console.log("entra");
+var menu=$('#menuTogle');
 var lastScrollTop = 0;
-window.addEventListener("scroll", function() {
-    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > lastScrollTop) {
-       menu.style.display= "block";
-       console.log("hacia abajo");
 
+$( window ).scroll(function() {
+   console.log("entra");
+  var currentScroll=window.pageYOffset || document.documentElement.scrollTop;
+  if (currentScroll > lastScrollTop) {
+     menu.css("display","block");
+     console.log("hacia abajo");
+  }
+  else{
+    if( currentScroll <= 3 ){
+      menu.css("display","none");
     }
-    else{
-      if( currentScroll <= 3 ){
-        console.log("hacia arria");
-           menu.style.display= "none";
-      }
-    }
+  }
     lastScrollTop = currentScroll;
-}, false);
+});

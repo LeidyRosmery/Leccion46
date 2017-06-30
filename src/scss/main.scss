@@ -41,18 +41,30 @@ $breakpoints: (xs : 0, sm : 768px, md : 992px, lg : 1200px );
     text-align: center;
     margin: 53px 0;
 }
+
+.logoMenu{
+  @include responsiveImg(14% , 30%);
+}
+.menuFixed{
+  border: 2px solid #efefef;
+  position: fixed;
+
+}
+#menuTogle {
+  display: none;
+}
 .img-epd1 {
     padding: 31px;
     @include responsiveImg(100% , 100%);
 }
 .menu {
-    text-align: center;
+
     ul {
-        margin-top: 21px;
-        margin-bottom: 50px;
+
         li {
             @include fontDetail (14px , 'Roboto' ,sans-serif, #414549 , 0, 21px);
             display: inline-block;
+            padding: 32px 21px;
             list-style: none;
             &:hover {
                 padding-bottom: 15px;
@@ -117,11 +129,12 @@ $breakpoints: (xs : 0, sm : 768px, md : 992px, lg : 1200px );
         @include fontDetail(16px , 'Roboto',sans-serif,#414549,24px,31px);
     }
 }
+
 .newsletter {
     background: #F1F3F4;
-    height: 104px;
     margin: 30px 31px 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     @include fontDetail(16px , 'Roboto',sans-serif,#000000,24px,31px);
     p:last-child {

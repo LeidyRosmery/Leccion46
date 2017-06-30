@@ -26,29 +26,25 @@ $breakpoints: (xs : 0, sm : 768px, md : 992px, lg : 1200px );
 .row {
     margin: 0 35px;
 }
-
 @mixin fontDetail ($fSize , $fFamily ,$otherFamily, $fColor , $fLine, $pdLeft) {
     font-size: $fSize;
     font-family: $fFamily,$otherFamily;
     color: $fColor;
     line-height: $fLine;
-    padding:0 $pdLeft;
+    padding: 0 $pdLeft;
 }
 @mixin responsiveImg($width , $height) {
     width: $width;
     height: $height;
 }
-
 .header {
     text-align: center;
-    margin: 65px 0;
+    margin: 53px 0;
 }
 .img-epd1 {
-padding: 31px;
-
-        @include responsiveImg(100% , 100%);
+    padding: 31px;
+    @include responsiveImg(100% , 100%);
 }
-
 .menu {
     text-align: center;
     ul {
@@ -56,45 +52,41 @@ padding: 31px;
         margin-bottom: 50px;
         li {
             @include fontDetail (14px , 'Roboto' ,sans-serif, #414549 , 0, 21px);
-            
             display: inline-block;
             list-style: none;
-            & :hover{
-              padding-bottom: 15px;
-              border-bottom: 3px solid #EFEFEF;
+            &:hover {
+                padding-bottom: 15px;
+                border-bottom: 3px solid #EFEFEF;
             }
         }
     }
 }
-
 .divisor {
     width: 98%;
     margin: 0 31px 60px;
     border-top: 4px solid #4285f4;
 }
-
 .divisor-pie {
     @extend .divisor;
     width: 100% !important;
     border-color: #EFEFEF !important;
     margin: 30px 0 0 !important;
 }
-
 .newfeed-title {
     display: flex;
     padding: 0 !important;
     justify-content: space-between;
 }
 .redes {
-  @include responsiveImg(40px,40px) ;
+    @include responsiveImg(40px,40px);
 }
-.redes, .redFB{
-  margin: 20px 31px 0;
+.redFB,.redes {
+    margin: 20px 31px 0;
 }
+
 .item {
     padding-bottom: 55px;
     text-align: justify;
-
     & .img-item {
         width: 90%;
         height: 383px;
@@ -112,55 +104,48 @@ padding: 31px;
     & .pie-item {
         @include fontDetail(14px , 'Roboto Mono',monospace,#516368,60px,31px);
     }
-    & .texto{
+    & .texto {
         @include fontDetail(20px , 'Roboto',sans-serif,#414549,33px,31px);
     }
-    & .texto3{
+    & .texto3 {
         @include fontDetail(20px , 'Roboto',sans-serif,#424242,33px,31px);
     }
-    & .enlace{
-@include fontDetail(14px , 'Roboto',sans-serif,#4285f4,33px,31px);
+    & .enlace {
+        @include fontDetail(14px , 'Roboto',sans-serif,#4285f4,33px,31px);
     }
-    & .texto2{
-      @include fontDetail(16px , 'Roboto',sans-serif,#414549,24px,31px);
+    & .texto2 {
+        @include fontDetail(16px , 'Roboto',sans-serif,#414549,24px,31px);
     }
 }
-
 .newsletter {
     background: #F1F3F4;
     height: 104px;
-    margin: 30px 31px 0 31px;
+    margin: 30px 31px 0;
     display: flex;
     align-items: center;
     @include fontDetail(16px , 'Roboto',sans-serif,#000000,24px,31px);
     p:last-child {
-      color:#4285f4 !important;
+        color: #4285f4 !important;
     }
 }
-
 .newsletter1 {
     @extend .newsletter;
-    margin:0 !important;
+    margin: 0 !important;
     background: #fff;
 }
-
 .img-text {
     @include responsiveImg(100% , 100%);
     border-radius: 86px;
 }
-
 .img-slider {
     @extend .img-item;
     height: 240px !important;
 }
-
 .pie-pag {
-
     .title-pie {
         margin-bottom: 10px;
         @include fontDetail(14px , 'Roboto',sans-serif,#4d4d4d,18px,31px);
     }
-
     .text-pie {
         list-style: none;
         @include fontDetail(14px ,'Roboto',sans-serif,#516368,18px,31px);

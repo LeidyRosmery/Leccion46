@@ -48,7 +48,7 @@ body{
 
 .Epd-1 {
   & .img-epd1{
-    @include responsiveImg(100% , 100%); ;
+    @include responsiveImg(100% , 100%);
 
   }
 }
@@ -67,8 +67,56 @@ body{
     }
   }
 }
+.Epd-1 {
+  padding-bottom: 55px;
+  & .title{
+    @include fontDetail(36px , 'Source Sans Pro',sans-serif,#424242,85px ,31px);
+ }
+  & .subtitle{
+     @include fontDetail(20px , 'Roboto',sans-serif,#424242,48px,31px);
+   }
+   & .contenido{
+      @include fontDetail(16px , 'Roboto',sans-serif,#424242,24px,31px);
+    }
+  & .pie-item{
+     @include fontDetail(14px , 'Roboto Mono',monospace,#516368,60px,31px);
+   }
+}
 
 
+.newsfeed-left{
+  span{
+     @include fontDetail(14px , 'Roboto Mono',monospace,#516368,60px,31px);
+  }
+  h3{
+      @include fontDetail(24px , 'Source Sans Pro',sans-serif,#212121,50px ,31px);
+  }
+  img{
+      @include responsiveImg(100% , 100%);
+  }
+  p{
+      @include fontDetail(16px , 'Roboto',sans-serif,#424242,24px,31px);
+  }
+}
+
+.newsfeed-rigth {
+  padding-bottom: 55px;
+  p{
+    @include fontDetail(16px , 'Roboto',sans-serif,#424242,24px,31px);
+  }
+  span{
+    @include fontDetail(14px , 'Roboto Mono',monospace,#516368,60px,31px);
+ }
+  h3{
+     @include fontDetail(24px , 'Source Sans Pro',sans-serif,#212121,50px ,31px);
+   }
+}
+
+.seccion {
+  border-top: 4px solid #4285f4;
+text-align: left;
+padding: 41px 0;
+}
 .item {
   padding-bottom: 55px;
   & .img-item{

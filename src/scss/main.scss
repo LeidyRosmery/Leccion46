@@ -68,7 +68,7 @@ body{
   }
 }
 .Epd-1 {
-  padding-bottom: 55px;
+
   & .title{
     @include fontDetail(36px , 'Source Sans Pro',sans-serif,#424242,85px ,31px);
  }
@@ -98,7 +98,28 @@ body{
       @include fontDetail(16px , 'Roboto',sans-serif,#424242,24px,31px);
   }
 }
+.newsfeed , .Epd-1 ,.item , .article{
+  margin-bottom: 55px;
+}
 
+.divisor{
+  width: 98%;
+  margin: 0 31px;
+  margin-bottom: 60px;
+  border-top: 4px solid #4285f4;
+}
+.newfeed-title{
+  display: flex;
+    justify-content: space-between;
+
+  & span:first-child{
+    @include fontDetail(24px , 'Source Sans Pro',sans-serif,#424242,24px,31px);
+  }
+  &  span:last-child{
+    @include fontDetail(14px , 'Roboto',sans-serif,#4285F4,36px,31px);
+    font-weight: 500;
+  }
+}
 .newsfeed-rigth {
   padding-bottom: 55px;
   p{
@@ -120,17 +141,44 @@ padding: 41px 0;
 .item {
   padding-bottom: 55px;
   & .img-item{
-    width: 577px;
+    width: 90%;
     height: 383px;
     margin: 0 31px;
   }
   & .title{
-    @include fontDetail(24px , 'Source Sans Pro',sans-serif,#424242,50px ,31px);
+    @include fontDetail(24px , 'Source Sans Pro',sans-serif,#424242,41px ,31px);
  }
   & .descripcion{
-     @include fontDetail(14px , 'Roboto',sans-serif,#424242,10px,31px);
+     @include fontDetail(14px , 'Roboto',sans-serif,#424242,20px,31px);
    }
   & .pie-item{
      @include fontDetail(14px , 'Roboto Mono',monospace,#516368,60px,31px);
    }
+}
+
+.newsletter{
+  background: #F1F3F4;
+  height: 104px;
+  margin: 0 31px;
+  display: flex;
+  align-items: center;
+  p{
+  @include fontDetail(16px , 'Roboto',sans-serif,#000000,24px,31px);
+  }
+  span{
+      @include fontDetail(16px , 'Roboto',sans-serif,#7EABF4,24px,31px);
+  }
+}
+.newsletter1{
+  @extend  .newsletter;
+  background: #fff;
+  margin-top: 30px;
+}
+.img-text{
+    @include responsiveImg(100% , 100%);
+    border-radius: 86px;
+}
+.img-slider{
+  @extend  .img-item ;
+  height: 240px !important;
 }

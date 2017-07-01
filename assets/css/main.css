@@ -225,6 +225,9 @@
 #menuTogle {
   display: none; }
 
+@media screen and (max-width: 768px) {
+  #menuTogle {
+    display: block; } }
 .img-epd1 {
   padding: 31px;
   width: 100%;

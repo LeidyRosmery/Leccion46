@@ -11,9 +11,6 @@ $breakpoints: (xs : 0, sm : 768px, md : 992px, lg : 1200px );
 }
 @mixin column($media, $min-width) {
      @media (min-width:$min-width){
-        .hidden-#{$media}{
-          display: none;
-        }
         @for $i from 1 through $columns {
             .column-#{$media}-#{$i} {
                 width: column-width($i);
@@ -23,11 +20,28 @@ $breakpoints: (xs : 0, sm : 768px, md : 992px, lg : 1200px );
     }
 }
 @each $name, $width in $breakpoints {
-
      @include column($name, $width);
-
 }
-
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
 
 .row {
     margin: 0 35px;
